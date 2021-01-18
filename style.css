@@ -32,3 +32,8 @@ body {
     padding: 20px;
     color: #fff;
 }
+
+#dogImage {
+    width: 250px;
+    height: 250px;
+}
