@@ -83,4 +83,76 @@ function getDogBreeds() {
     })
 }
 
+function parsejsonResponse(json) {
+
+
+    let breedsData = json.message;
+
+
+    let breedList = Object.keys(breedsData);
+
+    //reset all the current items in the list if any
+
+    dogBreedsList.innerHTML = " ";
+
+    breedList.forEach((breed) => {
+
+        let breedListItem = `<li>${breed}</li>`
+
+        dogBreedsList.innerHTML += breedListItem;
+    })
+}
+
 getDogBreeds();
+
+
+
+
+// fetching and displayinng breed images
+const breedImageContainer = document.getElementById('breed-image');
+
+
+// fetch images
+function fetchBreedImages(breedName) {
+
+    // url
+
+    let imageUrl = 'https://dog.ceo/api/breed/${breedName}/images';
+
+
+    fetch(imageUrl)
+        .then((response) => {
+            return response.json();
+        })
+        .then((json) => {
+            console.log(json);
+
+
+            // show image function
+
+            showImages(json);
+        })
+
+    .catch((error) => {
+        console.log(error);
+    })
+}
+
+function showImages(json) {
+
+    let imageList = json.message;
+
+    breedImageContainer.innerHTML = " ";
+
+    // loop through the images
+
+    imageList.forEach((image) => {
+        breedImageContainer.innerHTML = `<img src="${image}" class="gridItem"></image>`
+    })
+}
+
+dogBreedsList.addEventListener('click', e => {
+    if (e.target && e.target.nodeName == 'LI') {
+        fetchBreedImages(e.target.innerHTML.trim());
+    }
+})

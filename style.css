@@ -13,7 +13,7 @@ body {
     flex-direction: column;
     width: 100%;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     background: #000;
     color: #fff;
 }
@@ -33,17 +33,18 @@ body {
     color: #fff;
 }
 
-#dogImage {
+
+/* #dogImage {
     width: 250px;
     height: 250px;
-}
+} */
 
 #breed-list {
     list-style-type: none;
     padding: 0px;
     margin: 0px;
     width: 200px;
-    background-color: #f5f7f9;
+    background-color: #85898d;
 }
 
 #breed-list li {
@@ -53,4 +54,29 @@ body {
 #breed-list li:hover {
     padding: 10px;
     background-color: #d5d7d9;
+}
+
+
+/* breed images */
+
+#breed-image {
+    padding-left: 200px;
+    width: 100%;
+    min-width: 100px;
+    text-align: center;
+}
+
+.gridItem {
+    width: 200px;
+    height: 200px;
+    margin-left: 1%;
+    margin-top: 1%;
+    display: inline-block;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.gridItem:hover {
+    transform: scale(2, 2);
+    object-fit: contain;
 }
