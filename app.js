@@ -26,25 +26,61 @@ const dogImage = document.getElementById('dogImage');
 
 // get random dog image
 
-function getRandomImage() {
+// function getRandomImage() {
 
-    let dogImageUrl = 'https://dog.ceo/api/breeds/image/random';
+//     let dogImageUrl = 'https://dog.ceo/api/breeds/image/random';
 
 
-    // fetch the random image
+//     // fetch the random image
 
-    fetch(dogImageUrl)
+//     fetch(dogImageUrl)
+//         .then((response) => {
+//             return response.json();
+//         })
+//         .then((json) => {
+//             console.log(json);
+//             let imageUrl = json.message;
+//             dogImage.src = imageUrl;
+//         })
+//         .catch((error) => {
+//             console.log(error)
+//         })
+// }
+
+// getRandomImage();
+
+
+// list all dog breeds
+
+const dogBreedsList = document.getElementById('breed-list');
+
+
+// get all breeds
+
+function getDogBreeds() {
+
+
+    // list url
+    const listUrl = 'https://dog.ceo/api/breeds/list/all';
+
+    // fetch the list from the url
+
+    fetch(listUrl)
         .then((response) => {
             return response.json();
         })
-        .then((json) => {
-            console.log(json);
-            let imageUrl = json.message;
-            dogImage.src = imageUrl;
-        })
-        .catch((error) => {
-            console.log(error)
-        })
+
+    .then((json) => {
+        console.log(json);
+
+        // show html data
+
+        parsejsonResponse(json);
+    })
+
+    .catch((error) => {
+        console.log(error);
+    })
 }
 
-getRandomImage();
+getDogBreeds();

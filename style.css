@@ -37,3 +37,20 @@ body {
     width: 250px;
     height: 250px;
 }
+
+#breed-list {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    width: 200px;
+    background-color: #f5f7f9;
+}
+
+#breed-list li {
+    padding: 10px;
+}
+
+#breed-list li:hover {
+    padding: 10px;
+    background-color: #d5d7d9;
+}
