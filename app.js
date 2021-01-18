@@ -20,7 +20,7 @@
 //     console.log(data);
 // }
 
-const dogImage = document.getElementById('dogImage');
+// const dogImage = document.getElementById('dogImage');
 
 
 
@@ -75,7 +75,7 @@ function getDogBreeds() {
 
         // show html data
 
-        parsejsonResponse(json);
+        parseJsonResponse(json);
     })
 
     .catch((error) => {
@@ -83,7 +83,7 @@ function getDogBreeds() {
     })
 }
 
-function parsejsonResponse(json) {
+function parseJsonResponse(json) {
 
 
     let breedsData = json.message;

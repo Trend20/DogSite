@@ -9,12 +9,12 @@ html {
 }
 
 body {
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     width: 100%;
-    justify-content: center;
+    /* justify-content: center; */
     /* align-items: center; */
-    background: #000;
+    /* background: #000; */
     color: #fff;
 }
 
