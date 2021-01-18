@@ -113,14 +113,14 @@ const breedImageContainer = document.getElementById('breed-image');
 
 
 // fetch images
-function fetchBreedImages(breedName) {
+function getBreedImages(breedName) {
 
     // url
 
-    let imageUrl = 'https://dog.ceo/api/breed/${breedName}/images';
+    let dogImagesUrl = `https://dog.ceo/api/breed/${breedName}/images`;
 
 
-    fetch(imageUrl)
+    fetch(dogImagesUrl)
         .then((response) => {
             return response.json();
         })
@@ -151,8 +151,8 @@ function showImages(json) {
     })
 }
 
-dogBreedsList.addEventListener('click', e => {
+dogBreedsList.addEventListener('click', function(e) {
     if (e.target && e.target.nodeName == 'LI') {
-        fetchBreedImages(e.target.innerHTML.trim());
+        getBreedImages(e.target.innerHTML.trim());
     }
 })
