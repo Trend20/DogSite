@@ -1,3 +1,5 @@
+![](images/dog.png)
+
 # DogPic Website Directory
 
 ### This is a Dog pics website directory built using HTML/ CSS/ JavaScript and the Dog API.
