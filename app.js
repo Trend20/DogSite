@@ -149,7 +149,7 @@ function showImages(json) {
     // loop through the images
 
     imageList.forEach((image) => {
-        breedImageContainer.innerHTML += `<img src="${image}" class="gridItem"></image>`
+        breedImageContainer.innerHTML += `<img src="${image}" class="image_container"></image>`
     })
 }
 

@@ -27,6 +27,17 @@ header {
     padding: 10px 0px;
 }
 
+@media screen and (max-width:1200px) {
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+}
+
 #breed-list {
     list-style-type: none;
     padding: 10px;
@@ -43,6 +54,8 @@ header {
     text-transform: uppercase;
     color: #fff;
     font-size: .8rem;
+    height: 100%;
+    font-weight: 700;
 }
 
 #breed-list li:hover {
@@ -61,7 +74,7 @@ header {
     cursor: pointer;
 }
 
-.gridItem {
+.image_container {
     width: 200px;
     height: 200px;
     margin-left: 1%;
