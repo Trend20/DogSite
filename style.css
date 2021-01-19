@@ -9,46 +9,30 @@ html {
 }
 
 body {
-    /* display: flex; */
+    width: 100%;
+}
+
+.container {
+    display: flex;
     flex-direction: column;
     width: 100%;
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* background: #000; */
-    color: #fff;
-}
-
-#find {
-    display: flex;
-    width: 30%;
-    align-items: center;
+    padding: 50px;
     justify-content: center;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-    background: rgb(51, 168, 86);
-    margin-top: 50px;
-    padding: 20px;
-    color: #fff;
+    align-items: center;
 }
-
-
-/* #dogImage {
-    width: 250px;
-    height: 250px;
-} */
 
 #breed-list {
     list-style-type: none;
     padding: 0px;
     margin: 0px;
-    width: 200px;
+    width: 100%;
     background-color: #85898d;
+    display: flex;
 }
 
 #breed-list li {
     padding: 10px;
+    cursor: pointer;
 }
 
 #breed-list li:hover {
@@ -60,10 +44,11 @@ body {
 /* breed images */
 
 #breed-image {
-    padding-left: 200px;
+    padding-left: 0px;
     width: 100%;
     min-width: 100px;
     text-align: center;
+    cursor: pointer;
 }
 
 .gridItem {
@@ -74,9 +59,4 @@ body {
     display: inline-block;
     object-fit: cover;
     transition: transform 0.3s;
-}
-
-.gridItem:hover {
-    transform: scale(2, 2);
-    object-fit: contain;
 }

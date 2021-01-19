@@ -119,6 +119,7 @@ function getBreedImages(breedName) {
     const dogImagesUrl = `https://dog.ceo/api/breed/${breedName}/images`;
 
 
+    // fetch the images directly from the API
     fetch(dogImagesUrl)
         .then((response) => {
             return response.json();
@@ -132,6 +133,8 @@ function getBreedImages(breedName) {
             showImages(json);
         })
 
+
+    // console the error 
     .catch((error) => {
         console.log(error);
     })
