@@ -9,3 +9,8 @@
 * This website displays the images of dog breeds from differnt places.
 
 * You can search for the breed by clicking the links in the navigation.
+
+
+## To run the project locally just clone it using this command: 
+
+*git clone https://github.com/Trend20/DogSite*
