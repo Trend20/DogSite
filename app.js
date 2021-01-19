@@ -69,14 +69,13 @@ function getDogBreeds() {
         .then((response) => {
             return response.json();
         })
+        .then((json) => {
+            console.log(json);
 
-    .then((json) => {
-        console.log(json);
+            // show html data
 
-        // show html data
-
-        parseJsonResponse(json);
-    })
+            parseJsonResponse(json);
+        })
 
     .catch((error) => {
         console.log(error);
@@ -117,7 +116,7 @@ function getBreedImages(breedName) {
 
     // url
 
-    let dogImagesUrl = `https://dog.ceo/api/breed/${breedName}/images`;
+    const dogImagesUrl = `https://dog.ceo/api/breed/${breedName}/images`;
 
 
     fetch(dogImagesUrl)
@@ -142,12 +141,12 @@ function showImages(json) {
 
     let imageList = json.message;
 
-    breedImageContainer.innerHTML = " ";
+    breedImageContainer.innerHTML = "";
 
     // loop through the images
 
     imageList.forEach((image) => {
-        breedImageContainer.innerHTML = `<img src="${image}" class="gridItem"></image>`
+        breedImageContainer.innerHTML += `<img src="${image}" class="gridItem"></image>`
     })
 }
 
