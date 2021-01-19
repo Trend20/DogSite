@@ -2,7 +2,7 @@
 
 ### This is a Dog pics website directory built using HTML/ CSS/ JavaScript and the Dog API.
 
-** Link to the API ** : https://dog.ceo/dog-api/
+**Link to the API** : https://dog.ceo/dog-api/
 
 * This website displays the images of dog breeds from differnt places.
 
