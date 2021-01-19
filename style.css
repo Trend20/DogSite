@@ -10,6 +10,7 @@ html {
 
 body {
     width: 100%;
+    font-family: 'Raleway', sans-serif;
 }
 
 .container {
@@ -21,18 +22,27 @@ body {
     align-items: center;
 }
 
+header {
+    display: flex;
+    padding: 10px 0px;
+}
+
 #breed-list {
     list-style-type: none;
-    padding: 0px;
+    padding: 10px;
     margin: 0px;
     width: 100%;
-    background-color: #85898d;
+    background-color: #ad122c;
     display: flex;
+    overflow-x: scroll;
 }
 
 #breed-list li {
     padding: 10px;
     cursor: pointer;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: .8rem;
 }
 
 #breed-list li:hover {
@@ -55,6 +65,7 @@ body {
     width: 200px;
     height: 200px;
     margin-left: 1%;
+    border-radius: 50%;
     margin-top: 1%;
     display: inline-block;
     object-fit: cover;
