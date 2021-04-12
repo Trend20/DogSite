@@ -27,6 +27,21 @@ header {
     padding: 10px 0px;
 }
 
+.dogs {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    align-items: center;
+}
+
+.dogs i {
+    display: flex;
+    padding: 20px;
+    background: #000;
+    cursor: pointer;
+    color: #fff;
+}
+
 @media screen and (max-width:1200px) {
     header {
         display: flex;
@@ -40,12 +55,12 @@ header {
 
 #breed-list {
     list-style-type: none;
-    padding: 10px;
     margin: 0px;
+    padding: 10px;
     width: 100%;
     background-color: #ad122c;
     display: flex;
-    overflow-x: scroll;
+    overflow: hidden;
 }
 
 #breed-list li {
@@ -83,4 +98,47 @@ header {
     display: inline-block;
     object-fit: cover;
     transition: transform 0.3s;
+}
+
+@media screen and (max-width: 1200px) {
+    #breed-list {
+        list-style-type: none;
+        margin: 0px;
+        padding: 10px;
+        width: 100%;
+        background-color: #ad122c;
+        display: flex;
+        overflow: hidden;
+    }
+    #breed-list li {
+        padding: 10px;
+        cursor: pointer;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: .8rem;
+        height: 100%;
+        font-weight: 700;
+    }
+    #breed-list li:hover {
+        padding: 10px;
+        background-color: #d5d7d9;
+    }
+    /* breed images */
+    #breed-image {
+        padding-left: 0px;
+        width: 100%;
+        min-width: 100px;
+        text-align: center;
+        cursor: pointer;
+    }
+    .image_container {
+        width: 200px;
+        height: 200px;
+        margin-left: 1%;
+        border-radius: 50%;
+        margin-top: 1%;
+        display: inline-block;
+        object-fit: cover;
+        transition: transform 0.3s;
+    }
 }
